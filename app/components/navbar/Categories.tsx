@@ -18,6 +18,7 @@ import { FaSkiing } from "react-icons/fa";
 import { MdOutlineVilla } from "react-icons/md";
 import CategoryBox from "../CategoryBox";
 import { usePathname, useSearchParams } from "next/navigation";
+import { useEffect, useRef } from "react";
 export const categories = [
 	{
 		label: "Beach",
@@ -98,6 +99,29 @@ const Categories = () => {
 
 	const isMainPage = pathname === "/";
 
+	const containerRef = useRef<HTMLDivElement | null>(null);
+	useEffect(() => {
+		const container = containerRef.current;
+
+		if (!container) {
+			return;
+		}
+
+		const handleKeyDown = (e: KeyboardEvent) => {
+			if (e.key === "ArrowRight") {
+				container.scrollLeft += 100;
+			} else if (e.key === "ArrowLeft") {
+				container.scrollLeft -= 100;
+			}
+		};
+
+		container.addEventListener("keydown", handleKeyDown);
+
+		return () => {
+			container.removeEventListener("keydown", handleKeyDown);
+		};
+	}, [containerRef]);
+
 	if (!isMainPage) {
 		return null;
 	}
@@ -105,13 +129,9 @@ const Categories = () => {
 	return (
 		<Container>
 			<div
-				className="
-            pt-4
-            flex
-            flex-row
-            items-center
-            justify-between
-            overflow-x-auto"
+				className="flex justify-center py-4 space-x-4 overflow-x-auto"
+				ref={containerRef}
+				tabIndex={0}
 			>
 				{categories.map((item) => (
 					<CategoryBox
@@ -119,6 +139,7 @@ const Categories = () => {
 						label={item.label}
 						selected={category === item.label}
 						icon={item.icon}
+						className="border border-gray-200 rounded-md px-2 py-1 hover:bg-gray-50 transition-colors duration-300 ease-in-out"
 					/>
 				))}
 			</div>
