@@ -1,5 +1,5 @@
 # Airbnb Clone App
 
-## I'm currently building an Airbnb clone app using TypeScript, Tailwind CSS, and MongoDB. One of the major features I'm working on is the user authentication system for secure login and registration.
+I'm currently building an Airbnb clone app using TypeScript, Tailwind CSS, and MongoDB. One of the major features I'm working on is the user authentication system for secure login and registration.
 
-## i made use of the a youtube tutorial: https://youtu.be/c_-b_isI4vg as a guiding step and added my personal touches to it.
+I made use of a YouTube tutorial by [Clever Programmer](https://www.youtube.com/channel/UCqrILQNl5Ed9Dz6CGMyvMTQ) as a guide and added my personal touches to it.
