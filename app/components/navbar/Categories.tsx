@@ -129,7 +129,12 @@ const Categories = () => {
 	return (
 		<Container>
 			<div
-				className="flex justify-center py-4 space-x-4 overflow-x-auto"
+				className="pt-4
+				flex 
+				flex-row 
+				items-center 
+				justify-between
+				overflow-x-auto"
 				ref={containerRef}
 				tabIndex={0}
 			>
