@@ -1,4 +1,4 @@
-# Airbnb Clone App
+# Airbnb Clone WebApp
 
 I'm currently building an Airbnb clone app using TypeScript, Tailwind CSS, and MongoDB. Features included in the app are
 
