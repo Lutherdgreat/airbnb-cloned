@@ -68,7 +68,7 @@ export const categories = [
 	{
 		label: "Camping",
 		icon: GiForest,
-		description: "This property has is in a snowy area",
+		description: "This property is a in the forest, camping!",
 	},
 	{
 		label: "Cave",
