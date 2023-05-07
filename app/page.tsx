@@ -3,11 +3,11 @@ import Container from "./components/Container";
 import EmptyState from "./components/EmptyState";
 import getListings from "./actions/getListings";
 import ListingCard from "./components/listings/ListingCard";
-import getCurrentuser from "./actions/getCurrentUser";
+import getCurrentUser from "./actions/getCurrentUser";
 
 export default async function Home() {
 	const listings = await getListings();
-	const currentUser = await getCurrentuser();
+	const currentUser = await getCurrentUser();
 
 	if (listings.length === 0) {
 		return (
