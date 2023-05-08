@@ -10,5 +10,9 @@ I'm currently building an Airbnb clone app using TypeScript, Tailwind CSS, and M
 - Listing posting
 - Reservation handling (Canceling reservation from both owner of booking and guest)
 - Favorite component
+- Loading handling
+- Error handling
+- Filtering components
+- Interactive UI
 
 I made use of a YouTube tutorial by [Code With Antonio](https://youtu.be/c_-b_isI4vg) as a guide and added my personal touches to it.
