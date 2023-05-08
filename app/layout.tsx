@@ -7,8 +7,9 @@ import ClientOnly from "./components/ClientOnly";
 import RegisterModal from "./components/modals/RegisterModal";
 import ToasterProvider from "./providers/ToasterProvider";
 import LoginModal from "./components/modals/LoginModal";
-import getCurrentuser from "./actions/getCurrentUser";
+import getCurrentUser from "./actions/getCurrentUser";
 import RentModal from "./components/modals/RentModal";
+import SearchModal from "./components/modals/SearchModal";
 
 export const metadata = {
 	title: "Airbnb",
@@ -24,12 +25,13 @@ export default async function RootLayout({
 }: {
 	children: React.ReactNode;
 }) {
-	const currentUser = await getCurrentuser();
+	const currentUser = await getCurrentUser();
 	return (
 		<html lang="en">
 			<body className={font.className}>
 				<ClientOnly>
 					<ToasterProvider />
+					<SearchModal />
 					<RentModal />
 					<RegisterModal />
 					<LoginModal />
