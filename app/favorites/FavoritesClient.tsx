@@ -1,10 +1,10 @@
 import Container from "../components/Container";
 import Heading from "../components/Heading";
 import ListingCard from "../components/listings/ListingCard";
-import { SafeListings, SafeUser } from "../types";
+import { SafeListing, SafeUser } from "../types";
 
 interface FavoritesClientProps {
-	listings: SafeListings[];
+	listings: SafeListing[];
 	currentUser?: SafeUser | null;
 }
 
