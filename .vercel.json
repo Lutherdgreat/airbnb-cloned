@@ -1,12 +1,23 @@
 {
+    "version": 2,
     "builds": [
       {
         "src": "package.json",
         "use": "@vercel/node"
       },
       {
-        "src": "prisma/schema.prisma",
-        "use": "prisma:generate"
+        "src": "prisma",
+        "use": "@prisma/cli"
+      }
+    ],
+    "routes": [
+      {
+        "src": "/api/(.*)",
+        "dest": "api/$1"
+      },
+      {
+        "src": "/(.*)",
+        "dest": "/"
       }
     ]
   }
